@@ -308,6 +308,10 @@ func (ro *RqObj) CheckCsrf() (ok bool) {
 		return
 	}
 
+	if ro.CheckCsrf != nil {
+		return ro.CheckCsrfTmp(ro.User, key.Value, ro.R.FormValue("csrf"))
+	}
+
 	return initObj.CheckCsrf(ro.User, key.Value, ro.R.FormValue("csrf"))
 }
 
