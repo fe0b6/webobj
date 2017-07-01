@@ -30,7 +30,6 @@ type RqObj struct {
 	FontChan      chan string
 	Cache         map[string]interface{}
 	AppendFunc    func(*RqObj, map[string]interface{}) map[string]interface{}
-	CheckCsrfTmp  func(interface{}, string, string) bool
 	StopInlineCss bool
 }
 
