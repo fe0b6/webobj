@@ -82,7 +82,7 @@ func waitExit(exitChan chan bool) {
 func initCsp() {
 	cspa := []string{}
 	for _, k := range []string{"default-src", "frame-src", "object-src", "media-src",
-		"font-src", "img-src", "script-src", "style-src", "connect-src", "report-uri"} {
+		"font-src", "img-src", "script-src", "style-src", "connect-src", "frame-ancestors", "report-uri"} {
 
 		t := config.GetStrSilent(true, "web", "csp", k)
 		if t != "" {
