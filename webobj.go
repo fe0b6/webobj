@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	NODE_SCRIPT = "/usr/bin/nodejs"
+	NODE_SCRIPT = "/usr/bin/node"
 	MAX_ARG_LEN = 100000
 )
 
